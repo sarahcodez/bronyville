@@ -1,4 +1,4 @@
-Bronyville is a My Little Pony fan site demo aimed at Bronies (adult male fans of the cartoon series) that I built for a fun MEAN stack bootcamp homework assignment at Coding Campus. The instructions for the assignment can be found here: http://coursework.codingcamp.us/exercise-professional-services/
+Bronyville is a My Little Pony fan site demo aimed at Bronies (adult male fans of the cartoon series) that I built from scratch for an awesome homework assignment at Coding Campus (yes, we were literally assigned to build a fan site for Bronies!). The instructions for the assignment can be found here: http://coursework.codingcamp.us/exercise-professional-services/
 
 The site is built using Angular and has one controller (app.js), two model services (modelservice.js and modelmanager.js), and a responsive view (index.html) that uses HTML5, Bootstrap, and my own css styling (app.css).
 
@@ -12,4 +12,4 @@ My view (see index.html) uses Angular features like ng-repeat, ng-click and ng-s
 
 My app.css file styles the list of pre-populated images at the top of the page with table properties to produce a horizontally scrolling menu, using a CSS demo I found online ( http://www.webdesignerdepot.com/2014/02/how-to-create-horizontal-scrolling-using-display-table-cell/ ). 
 
-I had a fun time building and designing this web application and hope you enjoy it too!
+I had such a fun time building and designing this web application and hope you enjoy it too!
