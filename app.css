@@ -1,0 +1,124 @@
+.header h1 {
+	font-family: 'Slackey', cursive;
+	font-size: 3em;
+	float: left;
+}
+
+.header h1, h2 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+h1, h2, p {
+	color: #FF66CC;
+}
+
+h2, .pony {
+	font-family: "Fontdiner Swanky", cursive;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+p, button {
+	font-family: 'Montserrat', sans-serif;
+}
+
+button {
+	background-color: #FF66CC;
+	color: white;
+	border-radius: 25px;
+}
+
+.header {
+	margin-bottom: 15px;
+}
+
+.bro {
+	color: #00CCFF;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+/*Use of table properties for horizontal scrollbox: 
+http://www.webdesignerdepot.com/2014/02/how-to-create-horizontal-scrolling-using-display-table-cell/
+*/
+
+.scrollbox {
+	width: 100%;
+	height: 170px;
+	overflow: auto;
+}
+
+.horizontal-track2 {
+	width: 100%;
+	height: 10px;
+	background-color: lightgray;
+}
+
+.horizontal-handle2 {
+	height: 10px;
+	background-color: #FF66CC;
+}
+
+.table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin: 0; /* Without margin and padding set to 0 there's excess vertical whitespace*/
+	padding: 0;
+}
+
+.pre-populated li {
+	width: 200px;
+	display: table-cell;
+	text-align: center;
+}
+
+.pre-populated img {
+	height: 120px;
+}
+
+.submit-pony, .fav-description {
+	padding: 10px;
+}
+
+.submit {
+	margin-top: 5px;
+}
+
+.submit-pony {
+	width: 100%;
+	border-radius: 15px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.submit-media h2 {
+	margin: 10px;
+}
+
+.submit-pic {
+	background-color: #00CCFF;
+}
+
+.submit-flick {
+	background-color: #CC99FF;
+}
+
+.lighter-text {
+	color: white;
+}
+
+.error {
+	color: red;
+}

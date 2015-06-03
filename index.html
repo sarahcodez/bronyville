@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bronyville</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="app.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700|Fontdiner+Swanky|Slackey|Montserrat' rel='stylesheet'>
+</head>
+<body ng-app="MyLittlePony" ng-controller="mainCtrl">
+	<div class="container">
+		<div class="row header">
+			<div class="col-xs-12">
+				<h1><span class="bro">Bro</span>nyville</h1>
+				<h2 class="float-right">Broship Is Magic</h2>
+			</div>
+		</div>
+		<div class="row pre-populated scrollbox">
+			<ul class="table col-xs-12">
+				<li ng-repeat="pony in prePopulatedPonies">
+						<img ng-src="{{pony.img}}" />
+						<p class="pony">{{pony.name}}</p>
+				</li>
+			</ul>
+		</div>
+		<div class="row submit-media">
+			<section class="col-sm-6">
+				<div class="submit-pony submit-pic">
+					<p class="lighter-text">Submit a favorite pony pic:</p>
+					<p class="error" ng-show="errorPicIsTrue">{{errorPic}}</p>
+					<input type="text" placeholder="Name of Pony" ng-model="userPony.name">
+					<input type="text" placeholder="Image URL" ng-model="userPony.img">
+					<input type="text" placeholder="Username" ng-model="userPony.userName">
+					<button class="submit" ng-click="addFavPony()">Submit</button>
+				</div>
+				<div>
+					<h2>Favorite Pony Pics</h2>
+					<ul>
+						<li class="fav-item" ng-repeat="pony in favPonies">
+							<img class="img-responsive" ng-src="{{pony.img}}" />
+							<div class="fav-description">
+								<p class="pony">{{pony.name}}</p>
+								<p>Posted by: {{pony.userName}}</p>
+								<p><button ng-click="deleteFavPony($index)">Delete</button></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="col-sm-6">
+				<div class="submit-pony submit-flick">
+					<p class="lighter-text">Submit a favorite pony flick:</p>
+					<p class="error" ng-show="errorFlickIsTrue">{{errorFlick}}</p>
+					<input type="text" placeholder="Title" ng-model="userFlick.title">
+					<input type="text" placeholder="Youtube Video URL" ng-model="userFlick.video">
+					<input type="text" placeholder="Username" ng-model="userFlick.userName">
+					<button class="submit" ng-click="addFavFlick()">Submit</button>
+				</div>
+				<div>
+					<h2>Favorite Pony Flicks</h2>
+					<ul>
+						<li ng-repeat="flick in favFlicks">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="youtube-player embed-responsive-item" type="text/html" ng-src="{{trustSrc(flick.video)}}" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="fav-description">
+								<p class="pony">{{flick.title}}</p>
+								<p>Posted by: {{flick.userName}}</p>
+								<p><button ng-click="deleteFavFlick($index)">Delete</button></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
+<script src="app.js"></script>
+<script src="modelmanager.js"></script>
+<script src="modelservice.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/enscroll-0.6.1.min.js"></script>
+</body>
+</html>
